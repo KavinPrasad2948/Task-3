@@ -1,11 +1,8 @@
-const req = new XMLHttpRequest();
-req.open("GET", "https://restcountries.com/v3.1/all");
-req.send();
-req.onload = function() {
-  const obj = JSON.parse(this.response);
-  for (let i = 0; i < obj.length-1; i++) {
-    if (JSON.stringify(obj[i]) === JSON.stringify(obj[i+1])) {
-      console.log(obj[i]);
-    }
-  }
+let obj1 = {name:"PERSON1",age:5};
+let obj2 = {age:5,name:"PERSON1"};
+
+if (JSON.stringify(obj1) === JSON.stringify(obj2)) {
+  console.log("The objects have the same properties");
+} else {
+  console.log("The objects do not have the same properties");
 }
