@@ -5,7 +5,7 @@
  
 
 1. **Comparing JSON Objects without Considering Order of Properties**:
-To compare two JSON objects without considering the order of their properties, you can use the `JSON.stringify` method along with the `sort` method to sort the properties of the objects before comparing them. For example:
+The code uses the Object.keys() method to get an array of keys (property names) from each object. It then checks if the lengths of the two arrays are the same. If the lengths are different, the objects are not equal. Otherwise, it uses a for...in loop to iterate over the keys of the first object. For each key, it checks if the value of the property in the first object is equal to the value of the property in the second object. If any property has a different value, the objects are not equal. Otherwise, the objects are equal.
 
 
 
